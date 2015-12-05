@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GesternSchau</title>
+
+    <link rel="stylesheet" href="stylesheets/stylesheet.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js"></script>
+</head>
+<body ng-app="gesternSchauApp">
+<header class="page-header">
+    <div class="logo">
+        <img src="images/logo.jpg" alt="Nothing so far">
+        GesternSchau
+    </div>
+    <h3 class="date">{{date}}</h3>
+</header>
+
+<div ng-controller="StoriesController" class="stories">
+    <div class="story" ng-repeat="story in stories">
+        <div class="story-cover" ng-style="story.image && {'background': 'url({{story.image}}) center center no-repeat'} || {'color': 'initial', 'border': '1px solid rgba(128, 128, 128, 0.46)'}">
+            <div ng-if="story.image" class="black-cover"></div>
+            <div class="story-body">
+                <h4>{{story.title}}</h4>
+                <p>{{story.content}}</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="script/stories.js"></script>
+<script>
+    (function (window) {
+        var app = angular.module("gesternSchauApp", ["stories"])
+                .run(function ($rootScope) {
+                    $rootScope.date = "26.5.1946 Dienstag"
+                })
+    })(window);
+</script>
+</body>
+</html>
