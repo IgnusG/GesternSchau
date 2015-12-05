@@ -1,3 +1,5 @@
+/target
+/Procfile.windows
 /sass/.sass-cache
 /.env
 # Created by .ignore support plugin (hsz.mobi)
