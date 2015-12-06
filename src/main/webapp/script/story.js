@@ -124,15 +124,15 @@ angular.module("stories", ['ui.bootstrap', 'videoContainer', 'ngAnimate'])
             },
             {
                 type: "dummy",
-                image: "content/dummies/4.jpg"
+                image: "content/dummies/r4.jpg"
             },
             {
                 type: "dummy",
-                image: "content/dummies/5.jpg"
+                image: "content/dummies/r5.jpg"
             },
             {
                 type: "dummy",
-                image: "content/dummies/6.jpg"
+                image: "content/dummies/r6.jpg"
             }
         ];
 
