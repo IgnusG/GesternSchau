@@ -1,11 +1,11 @@
 package org.gesternschau.database;
 
-import org.gesternschau.database.stories.LimitedStory;
-import org.gesternschau.database.stories.Story;
+import org.gesternschau.database.stories.LimitedStoryObj;
+import org.gesternschau.database.stories.StoryObj;
 
 public class DatabaseService {
-    public Story[] retrieveContent() {
-        return new Story[] {new LimitedStory()};
+    public StoryObj[] retrieveContent() {
+        return new StoryObj[] {new LimitedStoryObj()};
         // Connect to database and pull stories
     }
 }

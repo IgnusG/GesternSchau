@@ -1,6 +1,6 @@
 package org.gesternschau.database;
 
-import org.gesternschau.database.stories.Story;
+import org.gesternschau.database.stories.StoryObj;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
@@ -13,7 +13,7 @@ public class DatabaseHook {
     @Path("getContent")
     @GET
     @Produces(MediaType.APPLICATION_JSON)
-    public Story[] getStories() {
+    public StoryObj[] getStories() {
         DatabaseService dbService = new DatabaseService();
         return dbService.retrieveContent();
     }

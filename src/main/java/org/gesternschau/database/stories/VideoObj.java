@@ -1,6 +1,6 @@
 package org.gesternschau.database.stories;
 
 // Git .
-public class Video extends SimpleStory {
+public class VideoObj extends SimpleStoryObj {
     private String src;
 }

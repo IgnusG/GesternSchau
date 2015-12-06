@@ -1,7 +1,7 @@
 package org.gesternschau.database.stories;
 
 // Git .
-public class LimitedStory extends Story {
+public class LimitedStoryObj extends StoryObj {
     private String content;
     private String image;
 }
