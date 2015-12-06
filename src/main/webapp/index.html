@@ -59,7 +59,7 @@
     </div>
 </header>
 
-<div ng-controller="StoriesController" class="stories grid js-masonry">
+<div ng-controller="StoriesController" class="stories grid">
     <story ng-repeat="story in stories" class="grid-item"></story>
 </div>
 
@@ -74,17 +74,19 @@
                 window.onload = function () {
                     var grid = document.querySelector('.grid');
                     imagesLoaded(grid, function () {
-                        var msnr = new Masonry(grid, {
-                            itemSelector: '.grid-item',
-                            isFitWidth: true
-                        });
-
                         // Safety
                         setTimeout(function () {
-                            // init Masonry after all images have loaded
-                            msnr.reloadItems();
-                            msnr.layout();
-                        },8000)
+                            var msnr = new Masonry(grid, {
+                                itemSelector: '.grid-item',
+                                isFitWidth: true
+                            });
+
+                            setTimeout(function() {
+                                // init Masonry after all images have loaded
+                                msnr.reloadItems();
+                                msnr.layout();
+                            }, 3000);
+                        },100)
                     });
                 }
             });
