@@ -74,16 +74,15 @@
                 window.onload = function () {
                     var grid = document.querySelector('.grid');
                     imagesLoaded(grid, function () {
-                        // init Masonry after all images have loaded
-                        var msnr = new Masonry(grid, {
-                            itemSelector: '.grid-item',
-                            isFitWidth: true
-                        });
-
                         // Safety
                         setTimeout(function () {
+                            // init Masonry after all images have loaded
+                            var msnr = new Masonry(grid, {
+                                itemSelector: '.grid-item',
+                                isFitWidth: true
+                            });
                             msnr.layout();
-                        },10000)
+                        },8000)
                     });
                 }
             });
