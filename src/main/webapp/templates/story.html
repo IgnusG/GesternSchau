@@ -1,0 +1,70 @@
+<div ng-switch="story.type">
+    <div class="story" ng-switch-when="story">
+
+        <div class="popup" ng-if="story.image" ng-class="{'hidden': hidden, 'visible': show}">
+            <button type="button" class="close" ng-click="hidePopup()"><span>&times;</span></button>
+            <div class="popup-content">
+                <h2>{{story.title}}</h2>
+                <h4>{{story.content}}</h4>
+                <img ng-src="{{story.image}}" alt="{{story.title}}">
+            </div>
+        </div>
+
+        <div class="story-front" ng-class="{'panel panel-default': !story.image}" ng-click="showPopup()">
+            <img ng-if="story.image" ng-src="{{story.image}}">
+            <div class="story-content" ng-style="story.color && {'color': story.color}"
+                 ng-class="{'text-overlay': story.image}">
+                <h3>{{story.title}}</h3>
+                <h4 ng-if="!story.image">{{story.content}}</h4>
+            </div>
+        </div>
+
+    </div>
+
+    <!--<video-container class="story" ng-switch-when="video"></video-container>-->
+
+    <div ng-switch-when="gallery">
+
+        <div class="story" ng-style="{'background': 'url({{story.coverImage}}) center center no-repeat'}">
+            <div class="gallery-content" ng-class="{'showContent': showContent}"
+                 ng-mouseenter="showContent = true"
+                 ng-mouseleave="showContent = false"
+                 ng-click="showContent = !showContent">
+                <img ng-src="{{story.image}}" alt="Image">
+                <div class="story-content text-overlay"
+                     ng-style="(story.color && showContent) && {'color': story.color} || ((story.color) && {'color': story.color})">
+                    <h3>{{story.title}}</h3>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div ng-switch-when="carousel">
+
+        <div class="story">
+
+            <div class="popup carousel-container" ng-if="story.image" ng-class="{'hidden': hidden, 'visible': show}">
+                <button type="button" class="close" ng-click="hidePopup()"><span>&times;</span></button>
+                <div class="popup-content">
+                    <h2>{{story.title}}</h2>
+                    <h4>{{story.content}}</h4>
+
+                    <uib-carousel interval="10000" no-wrap="noWrapSlides">
+                        <uib-slide ng-repeat="image in story.images">
+                            <img ng-src="{{image.image}}" alt="{{story.title}}">
+                            <h4>{{image.content}}</h4>
+                        </uib-slide>
+                    </uib-carousel>
+                </div>
+            </div>
+
+            <div class="story-front" ng-click="showPopup()">
+                <img ng-if="story.image" ng-src="{{story.image}}">
+                <div class="story-content text-overlay" ng-style="story.color && {'color': story.color}">
+                    <h3>{{story.title}}</h3>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

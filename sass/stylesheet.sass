@@ -5,33 +5,86 @@
 @import bootstrap/normalize
 @import bootstrap
 
+body
+  overflow-x: hidden
+
 header
   text-align: center
+  .logo img
+    width: 120px
 
 .stories
-  +display-flex()
-  +flex-wrap(wrap)
-  +flex-direction(column)
-  +align-content(space-between)
+  margin: 0 auto
   .story-cover
     background-size: cover !important
+  story > div
+    display: inline-block
   .story
-    +flex-grow(1)
     position: relative
+    cursor: pointer
     border-radius: 0
     max-width: 400px
-    color: white
     margin: 10px 30px
-    .black-cover
-      background: rgba(0, 0, 0, 0.71)
+    .story-content
+      padding: 20px
       width: 100%
-      height: 100%
-      top: 0
-      left: 0
-      position: absolute
-    .story-body
-      padding: 10px
-      position: relative
+      &.text-overlay
+        padding: 30px 10px 10px 10px
+        @include background-image(linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.5) 30%,  rgba(0,0,0, 0.80) 50%))
+        position: absolute
+        bottom: 0
+    img
+      max-width: 400px
+      width: 100%
+    .gallery-content
+      +transition(opacity 0.3s)
+      opacity: 0
+      &.showContent
+        opacity: 1
   @media screen and (min-width: 400px)
     +flex-direction(row)
 
+.popup
+  +transition(opacity 0.3s, transform 0.3s)
+  +box-sizing(border-box)
+  +transform(scale(0.8))
+  overflow-y: auto
+  position: fixed
+  cursor: default
+  opacity: 0
+  padding: 10% 50px 50px
+  width: 100vw
+  height: 100vh
+  top: 0
+  left: 0
+  z-index: 2
+  background: white
+  margin: auto
+  &.visible
+    +transform(scale(1))
+    opacity: 1
+  &.hidden
+    display: none
+  &:not(.carousel-container) img
+    +transition(opacity 0.3s)
+    max-width: 50%
+    opacity: 0.7
+    margin-top: 30px
+    &:hover
+      opacity: 1
+  .carousel
+    margin-top: 40px
+    div
+      text-align: left
+    img
+      max-width: 400px
+      width: 100%
+      float: left
+      margin-right: 30px
+      margin-bottom: 30px
+  button.close
+    +transition(transform 0.2s)
+    font-size: 2.8em
+    outline: none
+    &:hover
+      +transform(scale(1.1))
