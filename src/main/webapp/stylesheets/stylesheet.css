@@ -8781,11 +8781,17 @@ h2 {
 }
 
 /* line 14, ../../../../sass/stylesheet.sass */
-h4 {
-  font-size: 21px;
+h3 {
+  line-height: 35px;
 }
 
-/* line 17, ../../../../sass/stylesheet.sass */
+/* line 16, ../../../../sass/stylesheet.sass */
+h4 {
+  font-size: 21px;
+  line-height: 28px;
+}
+
+/* line 20, ../../../../sass/stylesheet.sass */
 ul.share-buttons {
   list-style: none;
   padding: 0;
@@ -8794,43 +8800,43 @@ ul.share-buttons {
   right: 12px;
 }
 
-/* line 24, ../../../../sass/stylesheet.sass */
+/* line 27, ../../../../sass/stylesheet.sass */
 ul.share-buttons li {
   margin: 5px;
 }
 
-/* line 27, ../../../../sass/stylesheet.sass */
+/* line 30, ../../../../sass/stylesheet.sass */
 header {
   margin-top: 15px !important;
   text-align: center;
 }
-/* line 30, ../../../../sass/stylesheet.sass */
+/* line 33, ../../../../sass/stylesheet.sass */
 header .logo-image {
   width: 98px;
 }
-/* line 32, ../../../../sass/stylesheet.sass */
+/* line 35, ../../../../sass/stylesheet.sass */
 header .logo-text {
   width: 144px;
   margin-left: 5px;
 }
 
-/* line 36, ../../../../sass/stylesheet.sass */
+/* line 39, ../../../../sass/stylesheet.sass */
 .stories {
   margin: 0 auto;
 }
-/* line 38, ../../../../sass/stylesheet.sass */
+/* line 41, ../../../../sass/stylesheet.sass */
 .stories .story-cover {
   background-size: cover !important;
 }
-/* line 40, ../../../../sass/stylesheet.sass */
+/* line 43, ../../../../sass/stylesheet.sass */
 .stories story > div {
   display: inline-block;
 }
-/* line 42, ../../../../sass/stylesheet.sass */
+/* line 45, ../../../../sass/stylesheet.sass */
 .stories .video {
   margin: 20px;
 }
-/* line 44, ../../../../sass/stylesheet.sass */
+/* line 47, ../../../../sass/stylesheet.sass */
 .stories .story {
   position: relative;
   cursor: pointer;
@@ -8838,16 +8844,16 @@ header .logo-text {
   max-width: 400px;
   margin: 10px 30px;
 }
-/* line 50, ../../../../sass/stylesheet.sass */
+/* line 53, ../../../../sass/stylesheet.sass */
 .stories .story.dummy {
   width: 110%;
 }
-/* line 52, ../../../../sass/stylesheet.sass */
+/* line 55, ../../../../sass/stylesheet.sass */
 .stories .story .story-content {
   padding: 20px;
   width: 100%;
 }
-/* line 55, ../../../../sass/stylesheet.sass */
+/* line 58, ../../../../sass/stylesheet.sass */
 .stories .story .story-content.text-overlay {
   padding: 30px 10px 10px 10px;
   background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIwLjAiLz48c3RvcCBvZmZzZXQ9IjMwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjUiLz48c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjgiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=');
@@ -8859,35 +8865,35 @@ header .logo-text {
   position: absolute;
   bottom: 0;
 }
-/* line 60, ../../../../sass/stylesheet.sass */
+/* line 63, ../../../../sass/stylesheet.sass */
 .stories .story .story-content h3 {
   font-weight: 600;
 }
-/* line 62, ../../../../sass/stylesheet.sass */
+/* line 65, ../../../../sass/stylesheet.sass */
 .stories .story img {
   max-width: 400px;
   width: 100%;
 }
-/* line 65, ../../../../sass/stylesheet.sass */
+/* line 68, ../../../../sass/stylesheet.sass */
 .stories .story .gallery-content {
   -webkit-transition: opacity 0.3s;
   -o-transition: opacity 0.3s;
   transition: opacity 0.3s;
   opacity: 0;
 }
-/* line 68, ../../../../sass/stylesheet.sass */
+/* line 71, ../../../../sass/stylesheet.sass */
 .stories .story .gallery-content.showContent {
   opacity: 1;
 }
 @media screen and (min-width: 400px) {
-  /* line 36, ../../../../sass/stylesheet.sass */
+  /* line 39, ../../../../sass/stylesheet.sass */
   .stories {
     -webkit-flex-direction: row;
     flex-direction: row;
   }
 }
 
-/* line 73, ../../../../sass/stylesheet.sass */
+/* line 76, ../../../../sass/stylesheet.sass */
 .popup {
   -webkit-transition: opacity 0.3s, transform 0.3s;
   -o-transition: opacity 0.3s, transform 0.3s;
@@ -8912,7 +8918,7 @@ header .logo-text {
   background: white;
   margin: auto;
 }
-/* line 89, ../../../../sass/stylesheet.sass */
+/* line 92, ../../../../sass/stylesheet.sass */
 .popup.visible {
   -moz-transform: scale(1);
   -ms-transform: scale(1);
@@ -8920,11 +8926,11 @@ header .logo-text {
   transform: scale(1);
   opacity: 1;
 }
-/* line 92, ../../../../sass/stylesheet.sass */
+/* line 95, ../../../../sass/stylesheet.sass */
 .popup.hidden {
   display: none;
 }
-/* line 94, ../../../../sass/stylesheet.sass */
+/* line 97, ../../../../sass/stylesheet.sass */
 .popup:not(.carousel-container) img {
   -webkit-transition: opacity 0.3s;
   -o-transition: opacity 0.3s;
@@ -8933,19 +8939,23 @@ header .logo-text {
   opacity: 0.7;
   margin-top: 30px;
 }
-/* line 99, ../../../../sass/stylesheet.sass */
+/* line 102, ../../../../sass/stylesheet.sass */
 .popup:not(.carousel-container) img:hover {
   opacity: 1;
 }
-/* line 101, ../../../../sass/stylesheet.sass */
+/* line 104, ../../../../sass/stylesheet.sass */
+.popup .popup-content .panel h4 {
+  margin: 0;
+}
+/* line 106, ../../../../sass/stylesheet.sass */
 .popup .carousel {
   margin-top: 40px;
 }
-/* line 103, ../../../../sass/stylesheet.sass */
+/* line 108, ../../../../sass/stylesheet.sass */
 .popup .carousel div {
   text-align: left;
 }
-/* line 105, ../../../../sass/stylesheet.sass */
+/* line 110, ../../../../sass/stylesheet.sass */
 .popup .carousel img {
   max-width: 400px;
   width: 100%;
@@ -8953,7 +8963,7 @@ header .logo-text {
   margin-right: 30px;
   margin-bottom: 30px;
 }
-/* line 111, ../../../../sass/stylesheet.sass */
+/* line 116, ../../../../sass/stylesheet.sass */
 .popup button.close {
   -webkit-transition: transform 0.2s;
   -o-transition: transform 0.2s;
@@ -8961,7 +8971,7 @@ header .logo-text {
   font-size: 2.8em;
   outline: none;
 }
-/* line 115, ../../../../sass/stylesheet.sass */
+/* line 120, ../../../../sass/stylesheet.sass */
 .popup button.close:hover {
   -moz-transform: scale(1.1);
   -ms-transform: scale(1.1);

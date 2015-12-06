@@ -15,42 +15,51 @@ angular.module("stories", ['ui.bootstrap', 'videoContainer', 'ngAnimate'])
                 src: "https://www.youtube.com/embed/e-zlfsxVrto"
             },
             {
-                type: "carousel",
-                title: "Die 10 einflussreichsten Bücher der Menschheitsgeschichte",
-                content: "Auf der “Canberra Book Week” wurden 200 Menschen befragt, welches Buch für sie den höchsten Einfluss auf die Menschheitsgeschichte hat. Das kam dabei heraus. \n\n Die “Canberra Book Week” zog in diesem Jahr mehr als 1500 Menschen ins Parlament von Canberra. Die Messe wird jedes Jahr in einer Kooperation mit dem australischen Institut und dem Westminster Bibliothekenverband aus London organisiert.",
+                type: "list",
+                title: "8 Bücher die die Menschheit veränderten",
+                content: "Auf der “Canberra Book Week” wurden 200 Menschen befragt, welches Buch für sie den höchsten Einfluss auf die Menschheitsgeschichte hat. Das kam dabei heraus.",
+                footer: "Die “Canberra Book Week” zog in diesem Jahr mehr als 1500 Menschen ins Parlament von Canberra. Die Messe wird jedes Jahr in einer Kooperation mit dem australischen Institut und dem Westminster Bibliothekenverband aus London organisiert.",
                 image: "content/buecher/header.jpg",
                 color: "white",
                 images: [
                     {
-                        content: "Die Bibel \n\n Einfach ein Klassiker!",
+                        title: "1. Die Bibel",
+                        content: "Einfach ein Klassiker!",
                         image: "content/buecher/jesus.jpg"
                     },
                     {
-                        content: "Shakespeare’s Werke",
+                        title: "2. Shakespeare",
+                        content: "William Shakespeare schrieb im 16. Jahrhundert viele Dramen, die jetzt so einflussreich sind, dass sie in jeder Schule bekannt sind. Darunter auch die Geschichte von Romeo und Julia.",
                         image: "content/buecher/shakespeare.jpg"
                     },
                     {
-                        content: "Homers Ilias \n\n Die Ilias ist eine der ältesten schriftlich fixierten Werke Europas, sie schildert einen Abschnitt des Trojanischen Krieges. Der Autor Homer gilt als frühester Dichter des Abendlandes. Von ihm sind weder Geburtsort noch das Datum seiner Geburt oder das seines Todes zweifelsfrei bekannt.",
+                        title: "3. Homer - Ilias",
+                        content: "Die Ilias ist eine der ältesten schriftlich fixierten Werke Europas, sie schildert einen Abschnitt des Trojanischen Krieges. Der Autor Homer gilt als frühester Dichter des Abendlandes. Von ihm sind weder Geburtsort noch das Datum seiner Geburt oder das seines Todes zweifelsfrei bekannt.",
                         image: "content/buecher/homer.jpg"
                     },
                     {
-                        content: "Darwin - Die Entstehung der Arten \n\n Charles Darwin ist ein englischer Naturforscher, der die Evolutionsbiologie grundlegend geprägt hat. Darwin legte in diesem Werk zahlreiche Belege für seine Theorie vor, dass sich Tier- und Pflanzenarten durch natürliche Selektion im Laufe langer Zeiträume verändern und dass alle heute existierenden Lebewesen von gemeinsamen Vorfahren abstammen",
+                        title: "4. Darwin - Die Entstehung der Arten",
+                        content: "Charles Darwin ist ein englischer Naturforscher, der die Evolutionsbiologie grundlegend geprägt hat. Darwin legte in diesem Werk zahlreiche Belege für seine Theorie vor, dass sich Tier- und Pflanzenarten durch natürliche Selektion im Laufe langer Zeiträume verändern und dass alle heute existierenden Lebewesen von gemeinsamen Vorfahren abstammen",
                         image: "content/buecher/darwin.jpg"
                     },
                     {
-                        content: "Einstein Die Relativitätstheorie",
+                        title: "5. Einstein Die Relativitätstheorie",
+                        content: "Seine Forschungen zur Struktur von Materie, Raum und Zeit sowie dem Wesen der Gravitation veränderten maßgeblich das physikalische Weltbild. Er gilt daher als einer der bedeutendsten Physiker aller Zeiten.",
                         image: "content/buecher/einstein.jpg"
                     },
                     {
-                        content: "Marx - Das Kapital",
+                        title: "6. Marx - Das Kapital",
+                        content: "Das Kapital ist eines der Hauptwerke von Karl Marx, ist eine Analyse und Kritik der kapitalistischen Gesellschaft mit weitreichenden Wirkungen in der Arbeiterbewegung und der Geschichte des 20. Jahrhunderts. Marx betont die Klassenstruktur der jeweiligen Gesellschaft. Er unterscheidet zwischen der Arbeiterklasse und den Großgrundbesitzern.",
                         image: "content/buecher/kapital.jpg"
                     },
                     {
-                        content: "Rousseau - Vom Gesellschaftsvertrag",
+                        title: "7. Rousseau - Vom Gesellschaftsvertrag",
+                        content: "Vom Gesellschaftsvertrag oder Prinzipien des politischen Rechtes (frz. Du Contract Social ou Principes du Droit Politique) ist das politisch-theoretische Hauptwerk des Genfer Philosophen Jean-Jacques Rousseau. Es erschien erstmals 1762 in Amsterdam und wurde daraufhin in Frankreich, den Niederlanden, in Genf und Bern sofort verboten.",
                         image: "content/buecher/vertrag.jpg"
                     },
                     {
-                        content: "Hitler (Mein Kampf)",
+                        title: "8. Hitler - Mein Kampf",
+                        content: "Mein Kampf ist eine politisch-ideologische Programmschrift Adolf Hitlers. Sie erschien in zwei Teilen. Hitler stellte darin seinen Werdegang zum Politiker und seine Weltanschauung dar. Das Buch enthält Hitlers Autobiografie, ist in der Hauptsache aber eine zweckgerichtete Kampf- und Propagandaschrift, die zum Neuaufbau der NSDAP als zentral gelenkter Partei unter Hitlers Führung dienen sollte.",
                         image: "content/buecher/hitler.jpg"
                     }
                 ]

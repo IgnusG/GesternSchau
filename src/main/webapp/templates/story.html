@@ -3,7 +3,7 @@
 
         <div class="popup" ng-if="story.image" ng-class="{'hidden': hidden, 'visible': show}">
             <button type="button" class="close" ng-click="hidePopup()"><span>&times;</span></button>
-            <div class="popup-content">
+            <div class="popup-content" style="max-width: 70%; margin-left: 15%">
                 <h2>{{story.title}}</h2>
                 <h3>{{story.content}}</h3>
                 <img ng-src="{{story.image}}" alt="{{story.title}}">
@@ -42,7 +42,6 @@
     <div ng-switch-when="carousel">
 
         <div class="story">
-
             <div class="popup carousel-container" ng-if="story.image" ng-class="{'hidden': hidden, 'visible': show}">
                 <button type="button" class="close" ng-click="hidePopup()"><span>&times;</span></button>
                 <div class="popup-content">
@@ -66,6 +65,38 @@
             </div>
         </div>
 
+    </div>
+    <div ng-switch-when="list">
+        <div class="story">
+            <div class="popup carousel-container" ng-if="story.image" ng-class="{'hidden': hidden, 'visible': show}">
+                <button type="button" class="close" ng-click="hidePopup()"><span>&times;</span></button>
+                <div class="popup-content">
+                    <div style="max-width: 70%; margin-left: 15%; margin-bottom: 30px">
+                        <h2>{{story.title}}</h2>
+                        <h3>{{story.content}}</h3>
+                    </div>
+
+                    <div style="vertical-align: top; margin-bottom: 30px">
+                        <div class="panel panel-default"
+                             style="max-width: 31%; vertical-align: top; display: inline-block; margin: 1%"
+                             ng-repeat="image in story.images">
+                            <h4 class="panel-heading">{{image.title}}</h4>
+                            <img ng-src="{{image.image}}" alt="{{image.title}}">
+                            <h4 class="panel-footer">{{image.content}}</h4>
+                        </div>
+                    </div>
+
+                    <h3>{{story.footer}}</h3>
+                </div>
+            </div>
+
+            <div class="story-front" ng-click="showPopup()">
+                <img ng-if="story.image" ng-src="{{story.image}}">
+                <div class="story-content text-overlay" ng-style="story.color && {'color': story.color}">
+                    <h3>{{story.title}}</h3>
+                </div>
+            </div>
+        </div>
     </div>
 
     <div ng-switch-when="dummy" class="story dummy">
