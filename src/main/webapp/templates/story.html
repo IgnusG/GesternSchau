@@ -1,11 +1,11 @@
-<div ng-switch="story.type">
+<div ng-switch="story.type" ng-class="{'video': story.type == 'video'}">
     <div class="story" ng-switch-when="story">
 
         <div class="popup" ng-if="story.image" ng-class="{'hidden': hidden, 'visible': show}">
             <button type="button" class="close" ng-click="hidePopup()"><span>&times;</span></button>
             <div class="popup-content">
                 <h2>{{story.title}}</h2>
-                <h4>{{story.content}}</h4>
+                <h3>{{story.content}}</h3>
                 <img ng-src="{{story.image}}" alt="{{story.title}}">
             </div>
         </div>
@@ -21,7 +21,7 @@
 
     </div>
 
-    <!--<video-container class="story" ng-switch-when="video"></video-container>-->
+    <video-container class="story" ng-switch-when="video"></video-container>
 
     <div ng-switch-when="gallery">
 
@@ -47,7 +47,7 @@
                 <button type="button" class="close" ng-click="hidePopup()"><span>&times;</span></button>
                 <div class="popup-content">
                     <h2>{{story.title}}</h2>
-                    <h4>{{story.content}}</h4>
+                    <h3>{{story.content}}</h3>
 
                     <uib-carousel interval="10000" no-wrap="noWrapSlides">
                         <uib-slide ng-repeat="image in story.images">
@@ -66,5 +66,11 @@
             </div>
         </div>
 
+    </div>
+
+    <div ng-switch-when="dummy" class="story dummy">
+        <div class="story-front">
+            <img ng-src="{{story.image}}" alt="Keine Beschreibung">
+        </div>
     </div>
 </div>

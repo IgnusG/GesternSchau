@@ -8,6 +8,6 @@ angular.module("videoContainer", ["ngSanitize"])
     return {
         restrict: "E",
         controller: "videoController",
-        template: "<iframe ng-src='{{trustSrc(story.src)}}' frameborder='0' allowfullscreen='true' width='100%' height='auto'></iframe>"
+        template: "<iframe ng-src='{{trustSrc(story.src)}}' frameborder='0' allowfullscreen='true' width='100%' height='300px'></iframe>"
     }
 });

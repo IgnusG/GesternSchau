@@ -6,6 +6,28 @@
     <title>gesternschau</title>
 
     <link rel="stylesheet" href="stylesheets/stylesheet.css">
+    <link rel="stylesheet" href="fonts/stylesheet.css">
+
+    <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="favicon/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="favicon/favicon-194x194.png" sizes="194x194">
+    <link rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="favicon/android-chrome-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="favicon/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="favicon/manifest.json">
+    <link rel="shortcut icon" href="favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-TileImage" content="favicon/mstile-144x144.png">
+    <meta name="msapplication-config" content="favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular-animate.min.js"></script>
@@ -15,13 +37,26 @@
     <script src="http://imagesloaded.desandro.com/imagesloaded.pkgd.js"></script>
     <script src="script/carousel.js"></script>
 </head>
-<div ng-app="gesternSchauApp">
+<body ng-app="gesternSchauApp">
 <header class="page-header">
     <div class="logo">
-        <img src="images/logo.png" alt="Nothing so far">
-        <h2>GesternSchau</h2>
+        <img class="logo-image" src="images/logo.png" alt="Nothing so far">
+        <img class="logo-text" src="images/logo-text.png" alt="Nothing so far">
     </div>
-    <h2 class="date">{{date}}</h2>
+    <h2 class="date">Gestern ist dein Heute <img style="height: 45px; margin-bottom: 6px;" src="images/flipclock.png" alt="{{date}}"> <!-- flipclock.jsLibrary not used {{date}}--></h2>
+    <div>
+        <ul class="share-buttons">
+            <li>
+                <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fgesternschau.herokuapps.com&t=gesternschau"
+                   title="Share on Facebook" target="_blank"><img src="images/Facebook.png"></a>
+            </li>
+            <li>
+                <a href="https://twitter.com/intent/tweet?source=http%3A%2F%2Fgesternschau.herokuapps.com&text=gesternschau:%20http%3A%2F%2Fgesternschau.herokuapps.com"
+                   target="_blank" title="Tweet"><img src="images/Twitter.png"></a></li>
+            <li><a href="https://plus.google.com/share?url=http%3A%2F%2Fgesternschau.herokuapps.com" target="_blank"
+                   title="Share on Google+"><img src="images/Google+.png"></a></li>
+        </ul>
+    </div>
 </header>
 
 <div ng-controller="StoriesController" class="stories grid">
@@ -33,25 +68,25 @@
 <script>
     (function (window) {
         var app = angular.module("gesternSchauApp", ["stories", "ngTouch"])
-                .run(function ($rootScope) {
-                    $rootScope.date = "6.12.1946";
+            .run(function ($rootScope) {
+                $rootScope.date = "1946";
 
-                    window.onload = function () {
-                        var grid = document.querySelector('.grid');
-                        imagesLoaded(grid, function () {
-                            // init Masonry after all images have loaded
-                            var msnr = new Masonry(grid, {
-                                itemSelector: '.grid-item',
-                                isFitWidth: true
-                            });
-
-                            // Safety
-                            setTimeout(function () {
-                                msnr.layout();
-                            },10)
+                window.onload = function () {
+                    var grid = document.querySelector('.grid');
+                    imagesLoaded(grid, function () {
+                        // init Masonry after all images have loaded
+                        var msnr = new Masonry(grid, {
+                            itemSelector: '.grid-item',
+                            isFitWidth: true
                         });
-                    }
-                });
+
+                        // Safety
+                        setTimeout(function () {
+                            msnr.layout();
+                        },3000)
+                    });
+                }
+            });
     })(window);
 </script>
 </body>

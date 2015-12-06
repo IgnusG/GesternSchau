@@ -7,11 +7,31 @@
 
 body
   overflow-x: hidden
+  font-family: "afta_sansregular", sans-serif
+
+h2
+  font-weight: 600
+h4
+  font-size: 21px
+
+ul.share-buttons
+  list-style: none
+  padding: 0
+  position: absolute
+  top: 10px
+  right: 12px
+
+ul.share-buttons li
+  margin: 5px
 
 header
+  margin-top: 15px !important
   text-align: center
-  .logo img
-    width: 120px
+  .logo-image
+    width: 98px
+  .logo-text
+    width: 144px
+    margin-left: 5px
 
 .stories
   margin: 0 auto
@@ -19,12 +39,16 @@ header
     background-size: cover !important
   story > div
     display: inline-block
+  .video
+    margin: 20px
   .story
     position: relative
     cursor: pointer
     border-radius: 0
     max-width: 400px
     margin: 10px 30px
+    &.dummy
+      width: 110%
     .story-content
       padding: 20px
       width: 100%
@@ -33,6 +57,8 @@ header
         @include background-image(linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.5) 30%,  rgba(0,0,0, 0.80) 50%))
         position: absolute
         bottom: 0
+      h3
+        font-weight: 600
     img
       max-width: 400px
       width: 100%
